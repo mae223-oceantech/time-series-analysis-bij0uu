@@ -90,11 +90,16 @@ VS Code can create the `mae223` conda environment directly from `environment.yml
 1. Open the **Command Palette**: press `Cmd+Shift+P` (Mac) / `Ctrl+Shift+P` (Windows)
 2. Type `Python: Create Environment` and select it
 3. Choose **Conda**
-4. VS Code will detect `environment.yml` in the repo — select it when prompted
-5. Wait a few minutes while the environment is created. A progress bar will appear at the bottom of VS Code.
-6. When it finishes, VS Code will automatically register `mae223` as an available kernel — no further steps needed.
+4. VS Code will show a list of environment files it found. If `environment.yml` appears, select it and skip to step 5. **If nothing appears or the list is empty:**
+   - Click the **browse** or **folder** icon in the prompt
+   - Navigate to your `time-series-analysis` folder
+   - Select `environment.yml` and click **Open**
+5. Wait a few minutes while the environment is created — a progress bar will appear at the bottom of VS Code
+6. When it finishes, VS Code will automatically register `mae223` as an available kernel — no further steps needed
 
-> **Note:** If VS Code does not detect `environment.yml` automatically, click the file icon next to the environment file prompt and navigate to it manually.
+> **Windows users:** VS Code may not detect `environment.yml` automatically. This usually means the repo folder is not open yet. Check the Explorer panel on the left sidebar — you should see `environment.yml` listed. If you don't, go to **File → Open Folder**, navigate to the `time-series-analysis` folder you cloned in Step 3, click **Select Folder**, then repeat Step 4.
+>
+> **Also on Windows:** If `Conda` does not appear as an option in step 3, close VS Code completely, reopen it, and try again. VS Code sometimes needs a restart to detect a freshly installed Miniconda.
 
 ---
 
